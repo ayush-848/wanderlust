@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+html {
+    scrollbar-width: none;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(54, 48, 92, 0.7), rgba(18, 25, 105, 0.7)), url(Images/cover.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 80px;
+    color: transparent;
+    text-shadow: 0px 5px rgba(255, 232, 232, 0.8), 0px 2px 10px rgba(1, 1, 26, 0.3);
+}
+
+.hero p {
+    font-size: 20px;
+    color: white;
+    font-style: italic;
+    margin-bottom: 300px;
+    margin-top: 20px;
+    padding-left: 27%;
+}
+
+.hero img {
+    margin: 25px 25px;
+    max-width: 100%;
+}
+
+.popular-travels {
+    padding: 20px;
+    background: rgb(227, 221, 217);
+}
+
+
+.popular-travels h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.travel-cards-container {
+    display: flex;
+    align-items: center;
+}
+
+.travel-cards {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: calc(100% - 100px);
+}
+
+.travel-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    flex: 0 0 calc(33.333% - 30px);
+    margin: 20px;
+    text-align: center;
+    background-color: #eee;
+    border-radius: 5px;
+    scroll-snap-align: start;
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+.card h3,
+.card p {
+    padding: 10px;
+}
+
+.next-btn, .back-btn {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #212ea0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.next-btn img,
+.back-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+
+.next-btn {
+    margin-left: 10px;
+}
+
+.back-btn {
+    margin-right: 10px;
+}
+
+.plan-travel {
+    padding: 20px;
+    text-align: center;
+}
+
+.plan-travel button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.plan-travel button:hover {
+    background-color: #3e8e41;
+}
+
+.navbar {
+    background-color: transparent;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.navbar.scrolled {
+    background-color: #24405c;
+}
+
+
+.navbar-brand {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.navbar-brand a:hover {
+    color: #ffc107;
+}
+
+.navbar-links a {
+    color: #ffffff; /* White color for links */
+    text-decoration: none; /* Remove underline */
+    margin-right: 70px; /* Add margin between links */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.navbar-links a:hover {
+    color: #ffc107; /* Change text color on hover */
+    text-decoration: underline; /* Add underline effect on hover */
+}
+
+
+.travel-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

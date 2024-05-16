@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wanderlust - Travel Blog</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "eEiMEJtq0_7o6j3Fc",
+      });
+   })();
+</script>
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-brand">
+          <a href="#home">
+            <span class="brand-text">Wanderlust</span>
+          </a>
+        </div>
+        <div class="navbar-links">
+          <a href="#about">About</a>
+          <a href="#destinations">Destination Pages</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    
+
+  <div class="hero">
+    <h1>Wanderlust - Travel Guide</h1>
+    <p>Explore the world, one adventure at a time.</p>
+  </div>
+
+  <section class="popular-travels">
+    <h2>Popular Travel Destinations</h2>
+    <div class="travel-cards-container">
+      <div class="back-btn"><img src="Images/back-icon.png" alt="Back"></div>
+      <div class="travel-cards">
+        <div class="card">
+          <img src="Images/Singapore.jpg" alt="Travel destination 1">
+          <h3>Singapore</h3>
+          <p>Experience the vibrant culture and modern architecture of Singapore, a bustling city-state known for its delicious street food and stunning skyline.</p>
+        </div>
+        <div class="card">
+          <img src="Images/Srilanka.png" alt="Travel destination 2">
+          <h3>Sri Lanka</h3>
+          <p>Discover the lush landscapes and rich history of Sri Lanka, from its ancient temples and colonial forts to its breathtaking beaches and wildlife-filled national parks.</p>
+        </div>
+        <div class="card">
+          <img src="Images/Indonesia.jpg" alt="Travel destination 3">
+          <h3>Indonesia</h3>
+          <p>Explore the diverse archipelago of Indonesia, home to stunning islands like Bali, Java, and Sumatra, each offering unique cultures, landscapes, and adventures.</p>
+        </div>
+        <div class="card">
+          <img src="Images/Switzerland.jpeg" alt="Travel destination 4">
+          <h3>Switzerland</h3>
+          <p>Experience the natural beauty and charm of Switzerland, with its snow-capped mountains, picturesque villages, and crystal-clear lakes, perfect for hiking, skiing, and relaxation.</p>
+        </div>
+        <div class="card">
+          <img src="Images/Turkey.jpg" alt="Travel destination 5">
+          <h3>Turkey</h3>
+          <p>Immerse yourself in the vibrant culture and rich history of Turkey, where East meets West, offering ancient ruins, bustling bazaars, and stunning coastlines along the Mediterranean and Aegean Seas.</p>
+        </div>
+        <div class="card">
+          <img src="Images/France.jpg" alt="Travel destination 6">
+          <h3>France</h3>
+          <p>Discover the romance and elegance of France, from the iconic landmarks of Paris to the charming villages of Provence and the sun-kissed beaches of the French Riviera, all while indulging in delicious cuisine and fine wine.</p>
+        </div>
+        <div class="card">
+            <img src="Images/Egypt.jpeg" alt="Travel destination 6">
+            <h3>Egypt</h3>
+            <p>Embark on a journey through ancient history and marvel at the wonders of Egypt, including the pyramids of Giza, the temples of Luxor, and the majestic Nile River, offering a glimpse into the world of the pharaohs.</p>
+          </div>
+          <div class="card">
+            <img src="Images/Japan.jpg" alt="Travel destination 6">
+            <h3>Japan</h3>
+            <p>Experience the unique blend of tradition and modernity in Japan, where ancient temples and serene gardens coexist with futuristic cities and innovative technology, offering a cultural adventure like no other.</p>
+          </div>
+          <div class="card">
+            <img src="Images/Spain.jpg" alt="Travel destination 6">
+            <h3>Spain</h3>
+            <p>Explore the vibrant culture and diverse landscapes of Spain, from the bustling streets of Madrid and Barcelona to the picturesque beaches of the Costa del Sol and the historic villages of Andalusia, all while savoring delicious tapas and wine.</p>
+          </div>
+      </div>
+      <div class="next-btn"><img src="Images/next-icon.png" alt="Next"></div>
+    </div>
+  </section>
+
+  <section class="plan-travel">
+    <h2>Plan Your Next Adventure</h2>
+    <form id="travel-form" class="travel-form">
+        <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Tell us about your dream trip</label>
+            <textarea id="message" name="message" placeholder="Enter your message" rows="4" required></textarea>
+        </div>
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+</section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
